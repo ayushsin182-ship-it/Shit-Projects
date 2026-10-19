@@ -1,0 +1,26 @@
+{
+  "name": "cp-lab", "displayName": "CP Lab — Local Competitive Programming",
+  "description": "Import problems, run samples and submit to Codeforces, AtCoder and LeetCode from VS Code.",
+  "version": "1.0.0", "publisher": "cplab", "license": "MIT",
+  "engines": {"vscode": "^1.85.0"}, "categories": ["Other"],
+  "main": "./extension.js", "activationEvents": ["onStartupFinished", "onUri"],
+  "capabilities": {"untrustedWorkspaces": {"supported": false}},
+  "contributes": {
+    "commands": [
+      {"command":"cplab.pair","title":"CP Lab: Copy Browser Pairing Token"},
+      {"command":"cplab.run","title":"CP Lab: Run Samples / Pre-submit Checks"},
+      {"command":"cplab.submit","title":"CP Lab: Submit to Judge"},
+      {"command":"cplab.results","title":"CP Lab: Show Results"},
+      {"command":"cplab.tests","title":"CP Lab: Edit Test Cases"},
+      {"command":"cplab.judge","title":"CP Lab: Open Problem in Browser"}
+    ],
+    "configuration": {"title":"CP Lab", "properties": {
+      "cplab.workspaceRoot":{"type":"string","default":"","description":"Problem folder. Empty uses ~/Documents/CP-Lab. Restart VS Code after changing."},
+      "cplab.cppCompiler":{"type":"string","default":"g++","description":"C++ compiler executable (no shell flags). Apple clang also works; avoid bits/stdc++.h with clang."},
+      "cplab.python":{"type":"string","default":"python3","description":"Python 3 executable."},
+      "cplab.javac":{"type":"string","default":"javac","description":"Java compiler executable, JDK 17+ recommended."},
+      "cplab.java":{"type":"string","default":"java","description":"Java runtime executable."},
+      "cplab.sampleTimeoutMs":{"type":"number","default":3000,"minimum":250,"maximum":15000,"description":"Wall-clock timeout per local sample; separate from judge limits."}
+    }}
+  }
+}
