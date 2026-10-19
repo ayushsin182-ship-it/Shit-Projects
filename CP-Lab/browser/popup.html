@@ -1,0 +1,11 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CP Lab</title><link rel="stylesheet" href="popup.css"></head><body>
+<header><div class="brand"><div class="mark">&gt;_</div><div><strong>CP Lab<span class="dot">.</span></strong><small>YOUR EDITOR. YOUR FLOW.</small></div></div><span id="connection" class="badge">Connecting</span></header>
+<main><div class="eyebrow">BROWSER → VS CODE</div><h1>Solve in your editor.</h1>
+<section class="problem"><div class="problem-head"><span id="site">PROBLEM</span><span class="live-dot"></span></div><h2 id="title">Open a problem to begin</h2><p id="subtitle">Codeforces · LeetCode · AtCoder</p></section>
+<fieldset><legend>SOLUTION LANGUAGE</legend><div class="languages"><label><input type="radio" name="language" value="cpp" checked><span>C++<small>17</small></span></label><label><input type="radio" name="language" value="python"><span>Python<small>3</small></span></label><label><input type="radio" name="language" value="java"><span>Java</span></label></div></fieldset>
+<button id="open" class="primary">Open in VS Code <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<div id="notice" role="status" aria-live="polite"></div>
+<details id="pairing"><summary>Connect your local workspace</summary><p>In VS Code, run <strong>CP Lab: Copy Browser Pairing Token</strong> from the Command Palette. Paste the token below.</p><label class="sr-only" for="token">Pairing token</label><div class="pair-row"><input id="token" type="password" placeholder="Paste pairing token" autocomplete="off" spellcheck="false"><button id="pair">Pair</button></div></details>
+<p class="workflow">Save your code <span>→</span> CP: Run <span>→</span> CP: Submit</p>
+<section class="result" id="result" hidden><div class="eyebrow">LATEST ACTIVITY</div><h3 id="verdict"></h3><div class="metrics"><span>Time <b id="time">—</b></span><span>Memory <b id="memory">—</b></span></div></section>
+</main><footer><span class="local-dot"></span> Local connection <span>v1.0 · College project</span></footer><script src="popup.js"></script></body></html>
